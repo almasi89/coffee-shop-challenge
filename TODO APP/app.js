@@ -1,4 +1,4 @@
-// Function to add a task
+// add a task
 function addTask() {
     const taskInput = document.getElementById("taskInput");
     const taskText = taskInput.value.trim();
@@ -10,21 +10,21 @@ function addTask() {
   
     const taskList = document.getElementById("taskList");
   
-    // Create a new list item
+    // new list 
     const li = document.createElement("li");
     li.innerHTML = `
       <span>${taskText}</span>
       <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
     `;
   
-    // Add the task to the list
+    // Add task 
     taskList.appendChild(li);
   
     // Clear the input field
     taskInput.value = "";
   }
   
-  // Function to delete a task
+  // delete a task
   function deleteTask(button) {
     const li = button.parentElement;
     li.remove();
